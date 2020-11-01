@@ -13,6 +13,15 @@ export default function App() {
         <
         h1 > Good { isMorning ? 'Morning' : 'Night' } < /h1>
 
+
+        <
+        button onClick = {
+            () => setMorning(!isMorning)
+        } >
+        Update Day <
+        /button>
+
+
         <
         Message counter = { count }
         /> <
@@ -23,14 +32,9 @@ export default function App() {
             () => setCount(++count)
         } >
         Update Counter <
-        /button>
+        /button> <
+        br / >
 
-        <
-        button onClick = {
-            () => setMorning(!isMorning)
-        } >
-        Update Day <
-        /button>
 
         <
         /div>
