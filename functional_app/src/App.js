@@ -1,13 +1,22 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Message } from './Message.js'
 import './App.css';
 
-function App() {
+export default function App() {
+
+    let [count, setCount] = useState(0)
+
+
     return ( <
         div >
+
         <
-        h1 > Hello World < /h1> <
-        /div>
+        Message counter = { count } > < /Message> <
+        br / >
+        <
+        button onClick = {
+            () => setCount(++count)
+        } > Update Counter < /button> < /
+        div >
     );
 }
-
-export default App;
